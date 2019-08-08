@@ -14,12 +14,12 @@ public class GooglePageSteps {
         googlePage.openGoogleSearch();
     }
 
-    @When("the user searches for the (.*)")
+    @When("I search for the (.*)")
     public void the_user_searches_for_the_keyword(String keyword){
         googlePage.searchForKeyword(keyword);
     }
 
-    @When("the user clicks on search link (.*)")
+    @When("I click on search link (.*)")
     public void the_user_clicks_on_link(String linkname){
         googlePage.clickSearchLink(linkname);
     }

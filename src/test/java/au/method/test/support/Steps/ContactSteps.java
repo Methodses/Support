@@ -9,18 +9,14 @@ import io.cucumber.java.en.When;
 public class ContactSteps {
 
     Home home = new Home();
+    Contact contact = new Contact();
 
-    @When("the user enters contact details")
-    public void the_user_enters_contact_details(){
-
+    @When("I enter contact details for the (.*)")
+    public void the_user_enters_contact_details(String enquiryReason){
+        contact.enterContactDetails(enquiryReason);
     }
 
-    @Then("the entered values should be available in the form")
-    public void the_entered_values_should_be_available_in_the_form(){
-
-    }
-
-    @When("the user clicks on Contact Us link in the home page")
+    @When("I click on Contact Us link in the home page")
     public void I_click_Contact_Us_link(){
         home.clickContactUs();
     }

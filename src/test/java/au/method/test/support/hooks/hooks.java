@@ -14,7 +14,7 @@ public class hooks {
 
     @After
     public void  closure(){
-        BasePage.close();
+       // BasePage.close();
     }
 
 }

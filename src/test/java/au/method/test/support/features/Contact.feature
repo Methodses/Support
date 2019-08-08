@@ -7,14 +7,13 @@ Feature: Contact Us Page
     @contact-positive
     Scenario Outline: Verify the Contact Us Page and enter the random detaisl
       Given I am in search engine
-      When the user searches for the <keyword>
-      And the user clicks on search link <link1>
+      When I search for the <keyword>
+      And I click on search link <link1>
       Then the <targetpage1> should be displayed
-      When the user clicks on Contact Us link in the home page
+      When I click on Contact Us link in the home page
       Then the <targetpage2> should be displayed
-      When the user enters contact details
-      Then the entered values should be available in the form
+      When I enter contact details for the <enquiryReason>
 
       Examples:
-      | link1                         | link2     | targetpage1                                                      | targetpage2                                         | keyword   |
-      | https://www.securepay.com.au/ | securepay | SecurePay online payment and eCommerce solutions for businesses  | Contact Us – SecurePay – Sales – Support – Accounts | securepay |
+      | link1                         |  targetpage1                                                    | targetpage2                                         | keyword   | enquiryReason |
+      | https://www.securepay.com.au/ | SecurePay online payment and eCommerce solutions for businesses | Contact Us – SecurePay – Sales – Support – Accounts | securepay | Support       |
